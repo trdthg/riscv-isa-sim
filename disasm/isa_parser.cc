@@ -173,6 +173,8 @@ isa_parser_t::isa_parser_t(const char* str, const char *priv)
       extension_table[EXT_ZFBFMIN] = true;
     } else if (ext_str == "zfinx") {
       extension_table[EXT_ZFINX] = true;
+    } else if (ext_str == "xtheadbs") {
+      extension_table[EXT_XTHEAD_BS] = true;
     } else if (ext_str == "zhinx") {
       extension_table[EXT_ZFINX] = true;
       extension_table[EXT_ZHINX] = true;

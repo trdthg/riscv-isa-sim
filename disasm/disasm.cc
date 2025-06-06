@@ -857,6 +857,8 @@ void disassembler_t::add_instructions(const isa_parser_t* isa, bool strict)
   // Following are HINTs, so they must precede their corresponding base-ISA
   // instructions.  We do not condition them on Zicbop/Zihintpause because,
   // definitionally, all implementations provide them.
+  add_insn(new disasm_insn_t("th.tst", MATCH_TH_TST, MASK_TH_TST, {&xrd, &xrs1, &imm}));
+
   DEFINE_PREFETCH(prefetch_r);
   DEFINE_PREFETCH(prefetch_w);
   DEFINE_PREFETCH(prefetch_i);
